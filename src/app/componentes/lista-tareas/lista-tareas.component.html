@@ -1,0 +1,7 @@
+<div class="card" style="margin-top: 20px;">
+  <div class="card-body">
+    <div *ngFor="let tarea of listaTareas">
+      <app-tarea [tarea]="tarea" (borrarTarea)="borrarTarea($event)"></app-tarea>
+    </div>
+  </div>
+</div>
