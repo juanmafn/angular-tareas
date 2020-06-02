@@ -8,15 +8,13 @@
         <div class="col-12">{{ tarea.descripcion }}</div>
       </div>
     </div>
-    <div class="col-3 mt-auto">
-      <a class="btn btn-light"
-         (click)="borrarTarea()"
-         href="#"
-         style="margin-right: 5px;"><i class="fa fa-trash"
-           aria-hidden="true"></i></a>
-      <a class="btn btn-light"
-         href="#"><i class="fa fa-pencil"
-           aria-hidden="true"></i></a>
+    <div class="col-3"
+         style="text-align: right;">
+      <a class="btn btn-light text-dark"
+         (click)="editarTarea()"
+         style="margin-right: 5px;"><i class="fa fa-pencil"></i></a>
+      <a class="btn btn-light text-dark"
+         (click)="borrarTarea()"><i class="fa fa-trash"></i></a>
     </div>
   </div>
 </div>

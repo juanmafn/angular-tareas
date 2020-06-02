@@ -1,10 +1,10 @@
-import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
-import { Tarea } from "src/app/modelo/tarea.model";
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Tarea } from 'src/app/modelo/tarea.model';
 
 @Component({
-  selector: "app-tarea",
-  templateUrl: "./tarea.component.html",
-  styleUrls: ["./tarea.component.css"],
+  selector: 'app-tarea',
+  templateUrl: './tarea.component.html',
+  styleUrls: ['./tarea.component.css']
 })
 export class TareaComponent implements OnInit {
   @Input()
@@ -19,16 +19,18 @@ export class TareaComponent implements OnInit {
 
   obtenerColorTarea() {
     switch (this.tarea.tipo) {
-      case "todo":
-        return "bg-warning text-dark";
-      case "doing":
-        return "bg-primary text-white";
-      case "done":
-        return "bg-success text-white";
+      case 'todo':
+        return 'bg-warning text-dark';
+      case 'doing':
+        return 'bg-primary text-white';
+      case 'done':
+        return 'bg-success text-white';
       default:
-        return "bg-light text-dark";
+        return 'bg-light text-dark';
     }
   }
+
+  editarTarea() {}
 
   borrarTarea() {
     this.borrarEvent.emit(this.tarea.id);
